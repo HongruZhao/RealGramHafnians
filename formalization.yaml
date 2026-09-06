@@ -1,0 +1,45 @@
+version: "v0.4"
+project:
+  name: "RealGramHafnians"
+  description: "Lean proofs of Theorems 2.1 and 2.3 for real Gram and symmetric Gaussian hafnians."
+  authors:
+    - "Hongru Zhao"
+  license: "Apache-2.0"
+sources:
+  - title: "Shifted Anticoncentration for Real Gram Hafnians and Symmetric Gaussian Hafnians"
+    authors:
+      - "Hongru Zhao"
+    type: "article"
+    relationship: "formalizes"
+status:
+  scope: "Theorems 2.1 and 2.3 and their supporting proofs; no whole-paper verification claim."
+  main_results:
+    - declaration: "RealGramHafnians.theorem2_1"
+      file: "RealGramHafnians.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+    - declaration: "RealGramHafnians.theorem2_3"
+      file: "RealGramHafnians.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+automation:
+  methods:
+    - method: "agent"
+      framework: "Codex"
+      tool_setup: "Lean 4, mathlib, Lake builds, and transitive axiom audits."
+      prompting_notes: "Prepared under the author's direction; preserve exact theorem hypotheses and exclude external mathematical inputs from the headline proofs."
+  notes: "Human-directed development and revisions; no independent human review is claimed."
+review:
+  status: "self-assessed"
+  notes: "Verification.lean checks transitive axioms with Lean.collectAxioms and rejects additional axioms. No numerical certificate or independent-kernel verification is claimed."
+alignment:
+  namespace: "RealGramHafnians"
+  statements:
+    - source: "Theorem 2.1"
+      lean: "RealGramHafnians.theorem2_1"
+      module: "RealGramHafnians"
+      status: "proved"
+    - source: "Theorem 2.3"
+      lean: "RealGramHafnians.theorem2_3"
+      module: "RealGramHafnians"
+      status: "proved"
