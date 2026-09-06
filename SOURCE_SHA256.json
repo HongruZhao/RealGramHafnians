@@ -436,7 +436,7 @@
   "LogdetLean/WishartScalarThird.lean": "fd36834766c393f8ed6b5204ad2d30e179ab68f54cd0b5da473e1d0d707928c3",
   "LogdetLean/WishartSequentialKernel.lean": "f86fc2b4615e494fc1ee740511abe98032be7218564d3368d85b3d2b1669355b",
   "LogdetLean/WishartSpectralRotation.lean": "c8a61b92d78287f96b3982509d0293039b1c7a63f6e3ec87259f2d425a174f6c",
-  "README.md": "b67f4d6e84164b08b15fcd121530eb9ffd5ccbe239b42e74bd1a48fc723cc039",
+  "README.md": "a86225b9c472e9286e799fa745250d4e932f7e900b978094f2b2caebe1fbf16f",
   "RealGramHafnians/Proofs/ReviewEnlargedFinite.lean": "f0df36b6d8b21e4896651482371f663bb25ed29fa4585f5cc262bfbf265a8066",
   "RealGramHafnians/Proofs/ReviewLaplacePositivity.lean": "3674ae3bafea4d6846d8aebdf7bbc68f02cf137dcc2e0e16f46bbf317f3a7168",
   "RealGramHafnians/Proofs/ReviewPositivity.lean": "251be3b4f6b5603356be87cffdf9661b64df70ead60730c35e943dc6a362bef1",

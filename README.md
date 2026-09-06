@@ -12,75 +12,78 @@ depend only on Lean's standard logical foundations: `propext`,
 
 ## Main results
 
-The hafnian order is $n$, so the symmetric matrices have size $2n$ by $2n$.
+The hafnian order is $`n`$, so the symmetric matrices have size $`2n`$ by $`2n`$.
 Write
 
-$$
-\gamma_d=\frac{\Gamma((d-1)/2)}{\sqrt{2}\,\Gamma(d/2)},\qquad d>1.
-$$
+```math
+\gamma_d=\frac{\Gamma((d-1)/2)}{\sqrt{2} \Gamma(d/2)},\qquad d>1.
+```
 
 ### Theorem 2.1: real Gram hafnians
 
-Let $n\ge1$ and $k\ge n+1$. Let $X$ be a $k$ by $2n$ matrix of independent
-standard real Gaussian entries, and set $H_{k,n}=\mathrm{haf}(X^\top X)$.
+Let $`n\ge1`$ and $`k\ge n+1`$. Let $`X`$ be a $`k`$ by $`2n`$ matrix of independent
+standard real Gaussian entries, and set $`H_{k,n}=\mathrm{haf}(X^\top X)`$.
 Its exact second moment and the coefficient in the interval bound are
 
-$$
-\sigma_{k,n}^2=\mathbb E H_{k,n}^2
-=(2n-1)!!\prod_{q=0}^{n-1}(k+2q),
-\qquad
-B_{k,n}=\sqrt{\frac2\pi}\,\sigma_{k,n}
+```math
+\sigma_{k,n}^2=\mathbb{E} H_{k,n}^2
+=(2n-1)!!\prod_{q=0}^{n-1}(k+2q).
+```
+
+```math
+B_{k,n}=\sqrt{\frac{2}{\pi}} \sigma_{k,n}
 \prod_{j=0}^{n-1}\gamma_{k-j}\prod_{r=2}^{n}\gamma_{2r-1}.
-$$
+```
 
-The law has a bounded continuous density $f_{k,n}$, with
+Here $`\sigma_{k,n}`$ is the positive root mean square.
+The law has a bounded continuous density $`f_{k,n}`$, with
 
-$$
-\sup_x f_{k,n}(x)=f_{k,n}(0)\le\frac{B_{k,n}}{2\sigma_{k,n}}.
-$$
+```math
+\sup_{x\in\mathbb{R}} f_{k,n}(x)=f_{k,n}(0)\le\frac{B_{k,n}}{2\sigma_{k,n}}.
+```
 
-For every $z\in\mathbb R$ and $\varepsilon\ge0$,
+For every $`z\in\mathbb{R}`$ and $`\varepsilon\ge0`$,
 
-$$
-\Pr\{|H_{k,n}-z|\le\varepsilon\sigma_{k,n}\}
-\le\min\{1,B_{k,n}\varepsilon\}.
-$$
+```math
+\Pr\left[|H_{k,n}-z|\le\varepsilon\sigma_{k,n}\right]
+\le\min\left\{1,B_{k,n}\varepsilon\right\}.
+```
 
-Under the additional condition $k\ge n+2$,
+Under the additional condition $`k\ge n+2`$,
 
-$$
-B_{k,n}\le\frac2{\sqrt\pi}\,n^{3/8}
-\exp\!\left(\frac{3n^2+n}{4(k-n-1)}\right).
-$$
+```math
+B_{k,n}\le\frac{2}{\sqrt{\pi}} n^{3/8}
+\exp\left(\frac{3n^2+n}{4(k-n-1)}\right).
+```
 
 ### Theorem 2.3: symmetric Gaussian hafnians
 
-Let $n\ge1$, and let $W$ be symmetric with independent standard real Gaussian
-entries above the diagonal. The diagonal is set to zero; it does not enter the
+Let $`n\ge1`$, and let $`W`$ be a $`2n`$ by $`2n`$ symmetric matrix with independent
+standard real Gaussian entries above the diagonal. The diagonal is set to zero; it does not enter the
 hafnian. Put
 
-$$
+```math
 H_n=\mathrm{haf}(W),\qquad
 \sigma_n=\sqrt{(2n-1)!!},\qquad
-b_n=\sqrt{\frac2\pi}\,\sigma_n\prod_{r=2}^{n}\gamma_{2r-1}.
-$$
+b_n=\sqrt{\frac{2}{\pi}} \sigma_n\prod_{r=2}^{n}\gamma_{2r-1}.
+```
 
-The second moment is $\mathbb E H_n^2=\sigma_n^2$. At fixed $n$,
-$k^{-n/2}H_{k,n}$ converges in distribution to $H_n$,
-$k^{-n/2}\sigma_{k,n}\to\sigma_n$, and $B_{k,n}\to b_n$.
-The normalized variable $H_n/\sigma_n$ has a continuous even density $p_n$ with
+The second moment is $`\mathbb{E} H_n^2=\sigma_n^2`$. At fixed $`n`$, as $`k\to\infty`$,
+$`k^{-n/2}H_{k,n}`$ converges in distribution to $`H_n`$,
+$`k^{-n/2}\sigma_{k,n}\to\sigma_n`$, and $`B_{k,n}\to b_n`$.
+The normalized variable $`H_n/\sigma_n`$ has a continuous even density $`p_n`$ with
 
-$$
-0\le p_n(x)\le p_n(0)\le b_n/2\le n^{3/8}/\sqrt\pi.
-$$
+```math
+0\le p_n(x)\le p_n(0)\le \frac{b_n}{2}\le\frac{n^{3/8}}{\sqrt{\pi}}.
+```
 
-For every $z\in\mathbb R$ and $\varepsilon\ge0$,
+For every $`z\in\mathbb{R}`$ and $`\varepsilon\ge0`$,
 
-$$
-\Pr\{|H_n-z|\le\varepsilon\sigma_n\}
-\le\min\{1,b_n\varepsilon\}
-\le\min\{1,(2/\sqrt\pi)n^{3/8}\varepsilon\}.
-$$
+```math
+\Pr\left[|H_n-z|\le\varepsilon\sigma_n\right]
+\le\min\left\{1,b_n\varepsilon\right\}
+\le\min\left\{1,\frac{2}{\sqrt{\pi}}n^{3/8}\varepsilon\right\}.
+```
 
 Empty products equal one. The complete Lean specifications are in
 [Challenge.lean](Challenge.lean); this file contains definitions, not assumed
