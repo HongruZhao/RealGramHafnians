@@ -22,7 +22,7 @@ $$
 ### Theorem 2.1: real Gram hafnians
 
 Let $n\ge1$ and $k\ge n+1$. Let $X$ be a $k$ by $2n$ matrix of independent
-standard real Gaussian entries, and set $H_{k,n}=\operatorname{haf}(X^\top X)$.
+standard real Gaussian entries, and set $H_{k,n}=\mathrm{haf}(X^\top X)$.
 Its exact second moment and the coefficient in the interval bound are
 
 $$
@@ -60,7 +60,7 @@ entries above the diagonal. The diagonal is set to zero; it does not enter the
 hafnian. Put
 
 $$
-H_n=\operatorname{haf}(W),\qquad
+H_n=\mathrm{haf}(W),\qquad
 \sigma_n=\sqrt{(2n-1)!!},\qquad
 b_n=\sqrt{\frac2\pi}\,\sigma_n\prod_{r=2}^{n}\gamma_{2r-1}.
 $$
